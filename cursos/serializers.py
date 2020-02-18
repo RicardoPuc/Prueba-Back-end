@@ -4,7 +4,7 @@ from .models import Curso, Leccion, Preguntas
 class CursoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Curso
-        fields = ('name')
+        fields = ('name',)
 
 
 class LeccionSerializer(serializers.HyperlinkedModelSerializer):

@@ -1,5 +1,9 @@
+
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from rest_framework import viewsets
+
+
 # Create your views here.
 from .serializers import CursoSerializer, LeccionSerializer, PreguntasSerializer
 from .models import Curso, Leccion, Preguntas
@@ -16,3 +20,9 @@ class LeccionViewSet(viewsets.ModelViewSet):
 class PreguntasViewSet(viewsets.ModelViewSet):
     queryset = Preguntas.objects.all().order_by('Pregunta')
     serializer_class = PreguntasSerializer
+
+
+
+
+
+ 
